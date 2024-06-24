@@ -15,7 +15,7 @@ def galley_list(request):
     ).select_related(
         'article',
     )
-    template = 'admin/editors/galley_list.html'
+    template = 'file_editor/galley_list.html'
     context = {
         'galleys': galleys,
     }
@@ -74,7 +74,7 @@ def edit_galley_file(request, article_id, galley_id):
                 )
             )
 
-    template = 'admin/editors/edit_galley_file.html'
+    template = 'file_editor/edit_galley_file.html'
     context = {
         'galley': galley,
         'form': form,
